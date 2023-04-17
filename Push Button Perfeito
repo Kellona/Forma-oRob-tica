@@ -1,0 +1,23 @@
+// C++ code
+//
+int Botao = 0;
+
+void setup()
+{
+  pinMode(13, INPUT);
+  pinMode(3, OUTPUT);
+}
+
+void loop()
+{
+  if (digitalRead(13) == HIGH) {
+    if (Botao == 1) {
+      Botao = 0;
+      digitalWrite(3, LOW);
+    } else {
+      Botao = 1;
+      digitalWrite(3, HIGH);
+    }
+  }
+  delay(250); // Wait for 250 millisecond(s)
+}
